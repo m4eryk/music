@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <header>
+                <p>18+</p>
+                <svg width="400" height="140"> 
+                    <polyline points="40,10 40,50 60,70 125,70" 
+                            stroke="#ffffffff" 
+                            stroke-width="10"
+                            fill="none" />
+                    <polyline points="135,10 135,50 155,70 225,70 225,10 130,10" 
+                            stroke="#ffffffff" 
+                            stroke-width="10"
+                            fill="none" />
+                    <polyline points="245,10 245,50 255,70 225,70 225,10 130,10" 
+                            stroke="#ffffffff" 
+                            stroke-width="10"
+                            fill="none" />       
+            
+                </svg>
+                <!--<h2>logo</h2>-->
+                <nav>
+                    <ul>
+                        <li><a href="#">Подборки</a></li>
+                        <li><a href="#">Рекомендации</a></li>
+                        <li><a href="#">Моя музыка</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="player">
+                <img src="assets/img/ba3e6de7138bda3be6193a3a37ff26b0.1000x1000x1.jpg" alt="music banner"/>
+                <p><strong id="demo">Марабу</strong></p>
+                <p>ATL</p>
+                <div class="control">
+                        <i class="fas fa-backward fa-2x"></i>
+                        <i class="fas fa-pause fa-2x"></i>
+                        <i class="fas fa-forward fa-2x"></i>
+                </div>
+            </div>
+        </div>
+        <main>
+            <article>
+                <aside >
+                    <div class="search">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Трек, исполнитель"/>
+                    </div>
+                    <div class="icon">
+                            <i class="fas fa-random fa-1x"></i>
+                            <i class="fas fa-sync-alt fa-1x"></i>
+                            <i class="fas fa-volume-up fa-1x"></i>
+                            <i class="fas fa-user-circle fa-1x"></i>
+                    </div>
+                </aside>
+
+                <section class="today">
+                        <i class="fas fa-play-circle fa-4x"></i>
+                        <div class="text">
+                            <span>Сегодня,<span id="day"> </span></span>
+                            <p>3 часа 43 минуты музыки - <a href="#">послушать рекомендованные сегодня треки</a></p>
+                        </div>
+                </section>
+
+                <iframe class="playlist" src="song.html" scrolling="yes">
+                    
+                </iframe>
+            </article>
+            
+        </main>
+    </div>
+    <div class="video">
+            <iframe src="https://www.youtube.com/embed/KGMpPsJQ2uA" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+            </iframe>
+    </div>
+
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>

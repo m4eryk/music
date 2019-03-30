@@ -1,0 +1,41 @@
+::-webkit-scrollbar { 
+    display: none; 
+}
+body{
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Open Sans', sans-serif;
+}
+.song {
+    
+    margin-top:35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+
+}
+.song img{
+    border: 1px solid #b0b0b0;
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+}
+.song p,h2{
+    margin: 0;
+    padding: 0;
+    font-size: 12pt;
+}
+.song .text span,.time{
+    color: #969292;
+}
+.song .info{
+    display: flex;
+    flex-direction: row;
+
+}
+.song .time{
+    padding-right: 20px;
+}
