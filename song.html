@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <link href="playlistStyles.css" rel="stylesheet">
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
         
             <section class="song">
                 <div class="info">
-                    <img src="assets/img/song/pyanay.jpg" alt="song banner">
+                    <img src="assets/img/song/pyanay.jpg" id="0" alt="song banner">
                     <div class="text">
                         <p><span>Полюби меня пьяную</span></p>
                         <p>Мари Краймбрери</p>
@@ -18,9 +19,9 @@
                     <p>3:30</p>
                 </div>
             </section>
-            <section class="song">
+            <section class="song" id="1" onclick="selctSong(1)">
                 <div class="info">
-                    <img src="assets/img/song/nezabudka.jpg" alt="song banner">
+                    <img src="assets/img/song/nezabudka.jpg"   alt="song banner">
                     <div class="text">
                         <p><span>Незабудка</span></p>
                         <p>Тима Беларусских</p>
@@ -32,7 +33,7 @@
             </section>
             <section class="song">
                 <div class="info">
-                    <img src="assets/img/song/sochrani.jpg" alt="song banner">
+                    <img src="assets/img/song/sochrani.jpg" id="2" alt="song banner">
                     <div class="text">
                         <p><span>Сохрани</span></p>
                         <p>Smash faet. Артем Пивоваров</p>
@@ -44,7 +45,7 @@
             </section>
             <section class="song">
                 <div class="info">
-                    <img src="assets/img/song/sobiraymena.jpg" alt="song banner">
+                    <img src="assets/img/song/sobiraymena.jpg" id="3" alt="song banner">
                     <div class="text">
                         <p><span>Собирай меня</span></p>
                         <p>Артем Пивоваров</p>
@@ -307,4 +308,5 @@
                                 </div>
                             </section>
 </body>
+
 </html>

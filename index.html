@@ -8,42 +8,55 @@
     
 </head>
 <body>
+    <audio autoplay="false" id="audio" class="audio" volume="40"></audio> 
     <div class="container">
         <div class="left-side">
             <header>
                 <p>18+</p>
-                <svg width="400" height="140"> 
-                    <polyline points="40,10 40,50 60,70 125,70" 
-                            stroke="#ffffffff" 
-                            stroke-width="10"
-                            fill="none" />
-                    <polyline points="135,10 135,50 155,70 225,70 225,10 130,10" 
-                            stroke="#ffffffff" 
-                            stroke-width="10"
-                            fill="none" />
-                    <polyline points="245,10 245,50 255,70 225,70 225,10 130,10" 
-                            stroke="#ffffffff" 
-                            stroke-width="10"
-                            fill="none" />       
-            
-                </svg>
-                <!--<h2>logo</h2>-->
+                <div class="logo">
+                    <svg width="450" height="60"> 
+                        <polyline points="15,5 15,35 35,55 100,55" 
+                                stroke="#ffffffff" 
+                                stroke-width="10"
+                                fill="none" />
+                        <polyline points="105,5 105,35 125,55 205,55 205,5 100,5" 
+                                stroke="#ffffffff" 
+                                stroke-width="10"
+                                fill="none" />
+                        <polyline points="325,5 225,5 225,35 245,55 325,55 325,35 265,35" 
+                                stroke="#ffffffff" 
+                                stroke-width="10"
+                                fill="none" />   
+                        <polyline points="340,5 340,35 360,55 440,55 440,5 335,5" 
+                                stroke="#ffffffff" 
+                                stroke-width="10"
+                                fill="none" />   
+                    </svg>
+                </div>
                 <nav>
                     <ul>
-                        <li><a href="#">Подборки</a></li>
-                        <li><a href="#">Рекомендации</a></li>
-                        <li><a href="#">Моя музыка</a></li>
+                        <li ><a href="#" >Подборки</a></li>
+                        <li ><a href="#" >Рекомендации</a></li>
+                        <li ><a href="#" >Моя музыка</a></li>
                     </ul>
                 </nav>
             </header>
             <div class="player">
-                <img src="assets/img/ba3e6de7138bda3be6193a3a37ff26b0.1000x1000x1.jpg" alt="music banner"/>
-                <p><strong id="demo">Марабу</strong></p>
-                <p>ATL</p>
+                <div class="banner">
+                    
+                    <img src="assets/img/song/pyanay.jpg" alt="music banner" id="banner"/>
+                    <div class="time">
+                        <span class="start" id="start"></span>
+                        <span class="end" id="end"></span>
+                    </div>
+                    <progress value="0" id='progress' ></progress>
+                </div>
+                <p><strong id="title">Ты полюби меня пьяную</strong></p>
+                <p id="artist">Мари Краймбрери</p>
                 <div class="control">
-                        <i class="fas fa-backward fa-2x"></i>
-                        <i class="fas fa-pause fa-2x"></i>
-                        <i class="fas fa-forward fa-2x"></i>
+                        <i class="fas fa-backward fa-2x" onclick="previous()"></i>
+                        <i class="fas fa-play fa-2x" onclick="playOrPause()" id="playIcon"  ></i>
+                        <i class="fas fa-forward fa-2x" onclick="next()"></i>
                 </div>
             </div>
         </div>
@@ -55,9 +68,9 @@
                         <input type="text" placeholder="Трек, исполнитель"/>
                     </div>
                     <div class="icon">
-                            <i class="fas fa-random fa-1x"></i>
-                            <i class="fas fa-sync-alt fa-1x"></i>
-                            <i class="fas fa-volume-up fa-1x"></i>
+                            <i class="fas fa-random fa-1x" onclick="Mix(this)"></i>
+                            <i class="fas fa-sync-alt fa-1x" onclick="Loop(this)"></i>
+                            <i class="fas fa-volume-up fa-1x" onclick="Mute(this)"></i>
                             <i class="fas fa-user-circle fa-1x"></i>
                     </div>
                 </aside>
@@ -76,15 +89,14 @@
             </article>
             
         </main>
+        <div class="video">
+                <iframe src="https://www.youtube.com/embed/KGMpPsJQ2uA" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                </iframe>
+        </div>
     </div>
-    <div class="video">
-            <iframe src="https://www.youtube.com/embed/KGMpPsJQ2uA" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-            </iframe>
-    </div>
-
 </body>
 <script type="text/javascript" src="script.js"></script>
 </html>
