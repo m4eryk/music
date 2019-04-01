@@ -9,6 +9,7 @@ var mix = false;
 var activ=false;
 var timer;
 var count=0;
+var loop=false;
 
 var song = [{
       src :"assets/music/Мари Краимбрери – Ты полюби меня пьяную.mp3",
@@ -76,9 +77,11 @@ function Loop(elm){
   var audio = document.getElementById('audio');
   if(audio.loop && audio.played){
     audio.loop=false;
+    loop=false;
   }
   else if(audio.played){
     audio.loop=true;
+    loop=true;
   }
   changColor(elm);
 }
@@ -141,7 +144,7 @@ function previous(){
 
 function selctSong(id)
 {
-  
+  //?
 }
 
 function playOrPause(){
@@ -156,7 +159,7 @@ function playOrPause(){
         start.innerHTML=(audio.currentTime / 60).toFixed(2);
         progressElm.max=audio.duration.toFixed(0);
         end.innerHTML=(audio.duration / 60).toFixed(2);
-        if(audio.currentTime>=audio.duration){
+        if(audio.currentTime>=audio.duration && !loop){
           next()
         }
     })
